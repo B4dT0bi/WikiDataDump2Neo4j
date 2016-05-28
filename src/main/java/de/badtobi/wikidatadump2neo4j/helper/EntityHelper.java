@@ -44,6 +44,8 @@ public class EntityHelper {
         return result;
     }
 
+    private static final String Q712226 = "km²";
+
     public static String getQuantity(WikiDataEntry entry, String property) {
         List<Claim> claimList = entry.getClaims().get(property);
         String result = null;
@@ -53,6 +55,7 @@ public class EntityHelper {
                 if (claim.getMainsnak().getDatatype().equals("quantity")) {
                     Map<String, String> valueMap = (Map) claim.getMainsnak().getDatavalue().getValue();
                     result = valueMap.get("amount");
+                    result += UnitConverter.convert(valueMap.get("unit"));
                 }
             }
         } catch (NullPointerException npe) {
@@ -88,5 +91,18 @@ public class EntityHelper {
 
         }
         return result;
+    }
+
+    public static String getString(WikiDataEntry entry, String property) {
+        try {
+            for (Claim claim : entry.getClaims().get(property)) {
+                if ("string".equals(claim.getMainsnak().getDatatype())) {
+                    return (String) claim.getMainsnak().getDatavalue().getValue();
+                }
+            }
+        } catch (NullPointerException npe) {
+
+        }
+        return null;
     }
 }

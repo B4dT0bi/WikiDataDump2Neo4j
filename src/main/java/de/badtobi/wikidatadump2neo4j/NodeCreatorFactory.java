@@ -27,6 +27,11 @@ public class NodeCreatorFactory {
         nodeCreatorMap.put(InstanceOf.PAINTING, new PaintingNodeCreator());
         nodeCreatorMap.put(InstanceOf.SKYSCRAPER, new SkyscraperNodeCreator());
         nodeCreatorMap.put(InstanceOf.THEATRE_PLAY, new TheatrePlayNodeCreator());
+        nodeCreatorMap.put(InstanceOf.COUNTRY, new CountryNodeCreator());
+        nodeCreatorMap.put(InstanceOf.RIVER, new RiverNodeCreator());
+        nodeCreatorMap.put(InstanceOf.SEA, new SeaOrLakeNodeCreator(InstanceOf.SEA));
+        nodeCreatorMap.put(InstanceOf.LAKE, new SeaOrLakeNodeCreator(InstanceOf.LAKE));
+        nodeCreatorMap.put(InstanceOf.MOUNTAIN, new MountainNodeCreator());
     }
 
     public void createNode(WikiDataEntry entry, Session session, InstanceOf instanceOf) {

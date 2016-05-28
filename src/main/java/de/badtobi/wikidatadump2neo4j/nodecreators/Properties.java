@@ -44,6 +44,13 @@ public interface Properties {
     String NUMBER_OF_ELEVATORS = "P1301";
     String LOCATION = "P276";
     String HEIGHT = "P2048";
+    String WIDTH = "P2049";
+    String VOLUME_AS_QUANTITY = "P2234";
+    String PERIMETER = "P2547";
+    String LENGTH = "P2043";
+    String DISCHARGE = "P2225";
+    String BASIN_COUNTRY = "P205";
+    String ELEVATION_ABOVE_SEA_LEVEL = "P2044";
     String AREA = "P2046";
     String ANTHEM = "P85";
     String CURRENCY = "P38";
