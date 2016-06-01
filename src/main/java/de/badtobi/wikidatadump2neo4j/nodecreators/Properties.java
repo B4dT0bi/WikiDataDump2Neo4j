@@ -63,4 +63,13 @@ public interface Properties {
     String HEAD_OF_GOVERNMENT = "P6";
     String CAPITAL = "P36";
     String POPULATION = "P1082";
+    String ELEMENT_SYMBOL = "P246";
+    String ATOMIC_NUMBER = "P1086";
+    String DENSITY = "P2054";
+    String MASS = "P2067";
+    String MELTING_POINT = "P2101";
+    String BOILING_POINT = "P2102";
+    String DISCOVERER_OR_INVENTOR = "P61";
+    String TIME_OF_DISCOVERY = "P575";
+
 }

@@ -5,7 +5,9 @@ package de.badtobi.wikidatadump2neo4j.helper;
  */
 public enum InstanceOf {
     COUNTRY("Country", new String[]{"Q6256"}),
+    AWARD("Awards", new String[]{"Q7191", "Q618779"}),
     HUMAN("Person", new String[]{"Q5"}),
+    CHEMICAL_ELEMENT("ChemicalElement", new String[]{"Q11344"}),
     FICTIONAL_HUMAN("FictionalPerson", new String[]{"Q15632617"}),
     GENDER("Gender", new String[]{"Q48277", "Q4369513", "Q48264"}),
     PROFESSION("Profession", new String[]{"Q28640", "Q12737077", "Q131512"}),
